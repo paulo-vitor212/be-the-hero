@@ -1,2 +1,11 @@
 # be-the-hero
- project to study node.js, react.js and react native
+
+ ## Para utilizar esse projeto:
+    
+    - cd backend
+    - npm install
+    - npx knex migrate:latest {para rodar as migrations}
+    - npm start
+
+    - cd ..
+    - cd frontend 
