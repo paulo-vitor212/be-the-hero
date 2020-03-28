@@ -54,7 +54,10 @@ module.exports = {
     async index(req,res){
         const {page = 1} = req.query;
 
-        const [count] = await connection('incidents').count();
+        const [count] = await connection('incidents')
+        .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
+        .select(['incidents.*','ongs.name', 'ongs.email', 'ongs.city', 'ongs.uf', 'ongs.whatsapp'])
+        .count();
         
         const incidents = await connection('incidents')
         .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
