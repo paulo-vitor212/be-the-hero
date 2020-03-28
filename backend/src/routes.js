@@ -20,11 +20,11 @@ routes.put('/incidents/:id', IncidentController.edit);
 
 routes.get('/incidents', IncidentController.index);
 
-routes.get('/incidents', IncidentController.indexByOng);
+routes.get('/incidentsOng', IncidentController.indexOng);
 
 routes.get('/incidents/:id', IncidentController.show);
 
-routes.delete('/incidents', IncidentController.delete);
+routes.delete('/incidents/:id', IncidentController.delete);
 
 routes.post('/session', SessionController.session);
 

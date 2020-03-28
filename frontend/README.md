@@ -7,6 +7,7 @@ Criação deste projeto
     - npm install react-router-dom
     - npm install react-icons
     - npm install axios
+    - npm install noty
 
 Estrutura de pastas
 

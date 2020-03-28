@@ -66,7 +66,7 @@ module.exports = {
         return res.json(incidents);
     },
 
-    async indexByOng(req,res){
+    async indexOng(req,res){
         const {authorization} = req.headers;
 
         const result = await connection('ongs').where('id' , authorization).first();
@@ -104,7 +104,7 @@ module.exports = {
             return res.json({"status" : "error", "msg" : "precisa estar logado para cadastrar um caso"})
         }
 
-        const ong_id = await connection('incidents').where('id', req.body.id).select('ong_id').first();
+        const ong_id = await connection('incidents').where('id', req.params.id).select('ong_id').first();
 
         if(ong_id.ong_id != authorization){
             return res.status(401).json({
@@ -112,7 +112,7 @@ module.exports = {
             })
         }
 
-        const incidents = await connection('incidents').where('id', req.body.id).first().del();
+        const incidents = await connection('incidents').where('id', req.params.id).first().del();
 
         if(!incidents){
             return res.json({"status" : "error"});
