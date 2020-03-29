@@ -8,7 +8,9 @@
    - Adicionei algumas funcionalidades que achei necessário, para deixar o projeto mais completo.
 
  ## Para utilizar esse projeto:
-    
+
+    # Para rodar esse projeto você precisa ter instalado, node, npm e expo
+
     - cd backend
     - npm install
     - npx knex migrate:latest {para rodar as migrations}
@@ -18,3 +20,9 @@
     - cd frontend 
     - npm install
     - npm start
+
+    - cd..
+    - cd mobile
+    - npm install
+    - npm start
+

@@ -65,10 +65,6 @@
     background: transparent;
 }
 
-.profile-container ul li button:last-child{
-    right: 60px;
-}
-
 .profile-container ul li button:hover{
     opacity: 0.8;
 }

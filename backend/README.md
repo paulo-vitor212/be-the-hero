@@ -77,6 +77,9 @@ Adicionando o cors para segurança
     que meu beckend só aceite requisições 
     feitas por um domínio específico
 
+Realizando validações com celebrate
+    - npm install celebrate
+
 
 
         

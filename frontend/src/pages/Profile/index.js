@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react';
 import {Link, useHistory} from 'react-router-dom';
-import {FiPower,FiTrash2, FiEdit} from 'react-icons/fi';
+import {FiPower,FiTrash2} from 'react-icons/fi';
 import logo from '../../assets/logo.svg';
 import Noty from 'noty';
 import "../../../node_modules/noty/lib/noty.css";  
@@ -85,9 +85,9 @@ const Profile = () => {
                         <FiTrash2 size={20} color="#a8a8b1"/>
                     </button>
 
-                    <button type="button">
+                    {/* <button type="button">
                         <FiEdit size={20} color="#a8a8b1"/>
-                    </button>
+                    </button> */}
                 </li>
                 ))}
             </ul>
